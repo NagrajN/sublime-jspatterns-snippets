@@ -1,0 +1,17 @@
+
+<snippet>
+    <content><![CDATA[
+/*
+EMPTY ANONONYMOUS CLOSURE
+*/
+
+(function(){
+//... in local scope.
+
+}());
+
+]]></content>
+    <tabTrigger>JS_Immediate_Function</tabTrigger> -->
+    <scope>source.js</scope>
+</snippet>
+

@@ -1,0 +1,39 @@
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+e.g.:
+${1:methodname}(${2:conf});
+
+Output:
+A
+B
+C
+
+*/
+
+var ${1:conf} = {
+
+    a: "A",
+    b: "B",
+    c: "C",
+};
+
+
+function ${1:methodname}(${2:conf})
+{
+    console.log(${1:conf}.a);
+    console.log(${1:conf}.b);
+    console.log(${1:conf}.c);
+}
+
+]]>
+
+</content>
+    <tabTrigger>JS_Config_Object</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+

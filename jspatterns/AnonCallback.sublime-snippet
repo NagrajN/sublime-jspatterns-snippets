@@ -1,0 +1,31 @@
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+e.g.
+${1:x}(function()
+{
+    console.log("ABC");
+});
+
+Output:
+ABC
+
+*/
+
+var ${1:x}  = function (callback)
+{
+    callback();
+};
+
+]]>
+
+</content>
+    <tabTrigger>JS_AnonCallback</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+
+

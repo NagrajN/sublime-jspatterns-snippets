@@ -1,0 +1,46 @@
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+
+Function with prototype holding Common Members
+
+var obj = new ${1:fn}();
+console.log(obj.publicFunction());
+console.log(obj.publicVar);
+
+Output:
+ABC
+XYZ
+
+
+*/
+
+function ${1:fn}(){};
+
+${1:fn}.prototype = (function(){
+
+    var privateVar = "ABC";
+
+    var exports = {};
+
+    exports.publicVar = "XYZ";
+
+    exports.publicFunction = function()
+    {
+        return privateVar;
+    };
+
+    return exports;
+
+}());
+
+]]>
+
+</content>
+    <tabTrigger>JS_Simple_Inheritance</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+

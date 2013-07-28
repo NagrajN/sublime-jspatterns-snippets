@@ -1,0 +1,39 @@
+
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+Construct a Literal Object
+
+//test
+console.log(${1:obj}.a);
+console.log(${1:obj}.b);
+console.log(${1:obj}.c());
+
+Output:
+1
+2
+ABC
+
+*/
+
+var ${1:obj}  = {
+
+a : 1,
+b : 2,
+c : function()
+{
+    return "ABC";
+}
+
+};
+
+]]>
+
+</content>
+    <tabTrigger>JS_Literal_Object</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+

@@ -1,0 +1,33 @@
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+
+console.log(new ${1:fn}());
+console.log(${1:fn}()); //antipattern dont do this but will still return a new object
+
+Output:
+{ var: 'ABC' }
+{ var: 'ABC' }
+
+*/
+
+function ${1:fn}()
+{
+
+    if (! (this instanceof ${1:fn}))
+        return new ${1:fn}();
+
+    this.var = "ABC";
+};
+
+
+]]>
+
+</content>
+    <tabTrigger>JS_Object_Constructor</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+

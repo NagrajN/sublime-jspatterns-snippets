@@ -1,0 +1,29 @@
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+JSON Literal
+e.g.
+console.log(${1:jstr});
+{ name1: 'value1', name2: 2, arr: [ 1, 2, 3 ] }
+
+*/
+
+var ${1:jstr} = {
+    "name1" : "value1",
+    "name2" : 2,
+    "arr" : [1,2,3]
+};
+
+]]>
+
+</content>
+    <tabTrigger>JS_JSON_Literal</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+
+
+

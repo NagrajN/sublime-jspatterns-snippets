@@ -1,0 +1,76 @@
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+
+Sandbox Pattern
+
+//example use
+
+var ${2:MODULE_1} = (function(){
+
+    var privateVar = "ABC";
+
+    var exports = {};
+
+    exports.fn = function()
+    {
+        return privateVar;
+    };
+
+    return exports;
+
+}());
+
+var ${2:MODULE_2} = (function(){
+
+    var privateVar = "XYZ";
+
+    var exports = {};
+
+    exports.fn = function()
+    {
+        return privateVar;
+    };
+
+    return exports;
+
+}());
+
+${1:Sandbox}([${2:MODULE_1}, ${2:MODULE_2}], function(${3:module1}, ${4:module2}){
+    console.log(${3:module1}.fn());
+    console.log(${4:module2}.fn());
+});
+
+Output:
+ABC
+XYZ
+
+*/
+
+function ${1:Sandbox} (moduleArray, callback)
+{
+
+    // Check if new has been called
+    if(!(this instanceof  ${1:Sandbox}))
+        return new  ${1:Sandbox}(moduleArray, callback);
+
+    // Set up callback arguments
+    var callbackArguments = [];
+
+    for(var i = 0; i < moduleArray.length; i++)
+        callbackArguments[i] = moduleArray[i];
+
+    //Apply to Callback
+    callback.apply(this, callbackArguments);
+}
+
+]]>
+
+</content>
+    <tabTrigger>JS_Sandbox</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+

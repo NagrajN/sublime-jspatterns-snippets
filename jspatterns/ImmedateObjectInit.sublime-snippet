@@ -1,0 +1,43 @@
+
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+    Immediate Object Init
+    e.g.
+
+    ${1:MODULE}.f${2:fn}();
+    ABC
+    XYZ
+
+*/
+
+var ${1:MODULE} = (function()
+{
+
+    this.${2:fn} = function()
+    {
+        console.log("XYZ");
+    };
+
+    this.init = function()
+    {
+        console.log("ABC");
+        return this;
+    };
+
+    return this;
+
+
+}().init());
+
+]]>
+
+</content>
+    <tabTrigger>JS_Immediate_Object_Init</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+

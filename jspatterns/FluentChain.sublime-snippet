@@ -1,0 +1,62 @@
+
+<snippet>
+    <content><![CDATA[
+/*
+
+FLUENT CHAIN
+
+e.g.
+${1:FCHAINAPI}.method1("A", "B").method2("C").result(function(result){
+        console.log(result);
+});
+
+Output: "ABC"
+
+*/
+var ${1:FCHAINAPI} = (function(){
+
+var Chain = function(input) {
+        that = this;
+        this.method1 = function(methodinput) {
+            input = input + methodinput;
+            return that;
+        };
+
+        this.method2 = function(methodinput) {
+
+            input = input + methodinput;
+            return that;
+        };
+
+        this.result = function(callback) {
+            callback(input);
+            return that;
+        };
+
+    };
+
+var exports = {};
+
+    exports.method1 = function(input, methodinput)
+    {
+        return new Chain(input).method1(methodinput);
+    };
+
+return exports;
+
+
+}());
+]]></content>
+    <tabTrigger>JS_Fluent_Chain</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+
+
+
+
+
+
+
+
+

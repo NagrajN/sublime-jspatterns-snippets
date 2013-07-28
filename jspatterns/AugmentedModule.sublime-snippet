@@ -1,0 +1,57 @@
+
+<snippet>
+    <content><![CDATA[
+
+
+/*
+AUGMENT MODULE
+
+e.g
+console.log(${1:MODULE}.publicfunction1);
+console.log(${1:MODULE}.publicFunction2);
+
+Output:
+ABC
+XYZ
+*/
+
+var ${1:MODULE}  = (function() {
+
+    //private functions
+    function privateFunction1() {
+        return "ABC";
+    };
+
+    var exports = {
+        //public functions
+        publicfunction1: privateFunction1()
+
+    };
+
+    return exports;
+
+}());
+
+
+var ${1:MODULE} = (function(myModule){
+
+    //private functions
+    function privateFunction2()
+    {
+        return "XYZ";
+    }
+
+    //public functions
+    myModule.publicFunction2 = privateFunction2();
+
+    return myModule;
+
+}(${1:MODULE}));
+
+
+]]></content>
+    <tabTrigger>JS_Augment_Module</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+

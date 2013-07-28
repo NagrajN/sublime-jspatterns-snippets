@@ -1,0 +1,26 @@
+
+<snippet>
+    <content>
+
+        <![CDATA[
+/*
+Namespace
+*/
+
+var ${1:MyNamespace} = ${1:MyNamespace} || {};
+
+//define Namespace Members
+
+]]>
+
+</content>
+    <tabTrigger>JS_Namespace</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+
+
+
+
+
+

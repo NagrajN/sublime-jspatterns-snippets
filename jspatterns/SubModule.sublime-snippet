@@ -1,0 +1,39 @@
+
+<snippet>
+    <content><![CDATA[
+/*
+ADD SUB MODULE
+
+e.g.
+console.log(${1:MODULE}.${2:SUB}.subMethod());
+
+Output: true
+*/
+
+var ${1:MODULE} = (function(){
+
+    var exports = {
+
+    };
+
+    return exports;
+
+}());
+
+${1:MODULE}.${2:SUB} = (function(){
+
+    var exports = {};
+
+    exports.subMethod = function()
+    {
+        return true;
+    };
+
+    return exports;
+
+});
+
+]]></content>
+    <tabTrigger>JS_Sub_Module</tabTrigger>
+    <scope>source.js</scope>
+</snippet>

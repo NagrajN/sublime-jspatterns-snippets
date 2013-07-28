@@ -1,0 +1,36 @@
+<snippet>
+    <content>
+
+        <![CDATA[
+
+/*
+(function global($)
+{
+    $;
+}(new ${1:obj}().${2:mCallback}()));
+
+Output:
+ABC
+
+*/
+
+
+var ${1:obj} = function(){
+
+    variable = "ABC",
+
+    this.${2:mCallback} = function(obj)
+    {
+        console.log(variable);
+    }
+};
+
+]]>
+
+</content>
+    <tabTrigger>JS_Callback_Object_Method</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+
+

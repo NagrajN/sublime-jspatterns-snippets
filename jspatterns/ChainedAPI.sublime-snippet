@@ -1,0 +1,46 @@
+<snippet>
+    <content><![CDATA[
+/*
+
+CHAIN API
+
+e.g.
+new ${1:Chain}("A").method1("B").method2("C").result(function(result) {
+    console.log(result)
+});
+
+Output: "ABC"
+
+*/
+
+var ${1:Chain}  = function(input) {
+        that = this;
+        this.method1 = function(methodinput) {
+
+            input = input + methodinput;
+            return that;
+        };
+
+        this.method2 = function(methodinput) {
+
+            input = input + methodinput;
+            return that;
+        };
+
+        this.result = function(callback) {
+            callback(input);
+            return that;
+        };
+
+    };
+
+
+new ${1:Chain}("A").method1("B").method2("C").result(function(result) {
+    console.log(result)
+});
+
+]]></content>
+    <tabTrigger>JS_Chain</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+

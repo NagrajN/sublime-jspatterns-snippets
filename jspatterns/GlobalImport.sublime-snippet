@@ -1,0 +1,26 @@
+
+<snippet>
+    <content><![CDATA[
+/*
+PASS GLOBALS AS PARAMETERS
+
+OUTPUT: "ABC"
+*/
+
+var ${1:global1} = {
+    str: "ABC"
+};
+
+(function($){
+    console.log($.str);
+}(${1:global1}));
+
+]]></content>
+    <tabTrigger>JS_Global_Import</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+
+
+
+

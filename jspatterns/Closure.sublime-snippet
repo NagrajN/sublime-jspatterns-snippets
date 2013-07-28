@@ -1,0 +1,40 @@
+
+<snippet>
+    <content>
+
+        <![CDATA[
+/*
+    Closure
+*/
+
+function fn()
+{
+
+    if(!(this instanceof fn))
+        return new fn();
+
+    function privateMethod()
+    {
+        return "XYZ";
+    };
+
+    privateProperty = "ABC";
+
+    var my= {};
+
+    my.publicMethod = privateMethod();
+    my.publicProperty = privateProperty;
+
+    return my;
+
+}
+
+
+]]>
+
+</content>
+    <tabTrigger>JS_Closure</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
+
